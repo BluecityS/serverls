@@ -8,6 +8,8 @@
 拒绝授权转让。
 -->
 <head>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
@@ -51,6 +53,9 @@
                     </li>
                     <li>
                         <a goto="#donate">DONATE</a>
+                    </li>
+                    <li>
+                        <a goto="#comm">COMMENT</a>
                     </li>
                 </ul>
                 <div class="copyright">
@@ -109,6 +114,18 @@
                         <a href="https://paypal.me/lwl12" target="_blank">https://paypal.me/lwl12</a>
                     </p> -->
                 </section>
+              <div id="comm">
+              <section>
+                <div id="vcomments"></div>
+    <script>
+        new Valine({
+            el: '#vcomments',
+            appId: 'QmVaiTR4H0YpHoObmqPl2anP-gzGzoHsz',
+            appKey: 'qHf3PRPFzVPKnD9sJ8CiaBvE'
+        })
+    </script>
+                </section>
+                </div>
             </div>
         </div>
 
