@@ -257,7 +257,7 @@ body {
     font-family: "Lucida Grande", "Lucida Sans Unicode", Lucida, "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
     -webkit-font-smoothing: antialiased;
     height: 100%;
-    background-image: url("/bg.jpg");
+    background-image: url("/bg.bmp");
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
