@@ -291,7 +291,7 @@ main .content {
 
 .left .avatar img {
     border-radius: 100%;
-    border: 5px #ff4081 solid;
+    border: 5px #fff solid;
   	animation: share 5s infinite ease-in-out;
 }
 
