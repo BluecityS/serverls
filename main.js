@@ -1,39 +1,12 @@
 var api = "https://www.fly3949.com/";
+var api = "https://www.fly3949.com/";
 
 $(document).ready(function () {
     $(".loading").hide();
     getAchives();
     gethitokoto();
 });
-function tiaozi() {
-var a_idx = 0;    
-        jQuery(document).ready(function($) {    
-            $("body").click(function(e) {    
-                var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正" ,"法治", "爱国", "敬业", "诚信", "友善");    
-                var $i = $("<span/>").text(a[a_idx]);    
-                a_idx = (a_idx + 1) % a.length;    
-                var x = e.pageX,    
-                y = e.pageY;    
-                $i.css({    
-                    "z-index": 999999999999999999999999999999999999999999999999999999999999999999999,    
-                    "top": y - 20,    
-                    "left": x,    
-                    "position": "absolute",    
-                    "font-weight": "bold",    
-                    "color": "#ff6651"    
-                });    
-                $("body").append($i);    
-                $i.animate({    
-                    "top": y - 180,    
-                    "opacity": 0    
-                },    
-                1500,    
-                function() {    
-                $i.remove();    
-            });    
-        });    
-    }); 
-});
+
 $('.menu a').click(function () {
     target = $(this).attr('goto');
     switchTo(target);
@@ -109,3 +82,28 @@ Date.prototype.Format = function (fmt) { //author: meizz
         if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
     return fmt;
 }
+
+//寮傛鍔犺浇鑳屾櫙
+
+function blobToDataURI(blob, callback) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+        callback(e.target.result);
+    }
+    reader.readAsDataURL(blob);
+}
+var url = "/bg.jpg";
+var xhr = new XMLHttpRequest();
+xhr.open('GET', url, true);
+xhr.responseType = "blob";
+xhr.onload = function () {
+    if (this.status == 200) {
+        var blob = this.response;
+        blobToDataURI(blob, function (t) {
+            $("body").css("background-image", "url('" + t + "')");
+            $("#background-small").addClass("smallBg");
+            $("#background-small").css("opacity", "0");
+        });
+    }
+}
+xhr.send();
