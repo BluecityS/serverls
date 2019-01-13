@@ -1,5 +1,4 @@
 var api = "https://www.fly3949.com/";
-var api = "https://www.fly3949.com/";
 
 $(document).ready(function () {
     $(".loading").hide();
@@ -61,21 +60,21 @@ function write(text) {
     }
 }
 
-// 瀵笵ate鐨勬墿灞曪紝灏� Date 杞寲涓烘寚瀹氭牸寮忕殑String
-// 鏈�(M)銆佹棩(d)銆佸皬鏃�(h)銆佸垎(m)銆佺(s)銆佸搴�(q) 鍙互鐢� 1-2 涓崰浣嶇锛� 
-// 骞�(y)鍙互鐢� 1-4 涓崰浣嶇锛屾绉�(S)鍙兘鐢� 1 涓崰浣嶇(鏄� 1-3 浣嶇殑鏁板瓧) 
-// 渚嬪瓙锛� 
+// 对Date的扩展，将 Date 转化为指定格式的String
+// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
+// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
+// 例子： 
 // (new Date()).Format("yyyy-MM-dd hh:mm:ss.S") ==> 2006-07-02 08:09:04.423 
 // (new Date()).Format("yyyy-M-d h:m:s.S")      ==> 2006-7-2 8:9:4.18 
 Date.prototype.Format = function (fmt) { //author: meizz 
     var o = {
-        "M+": this.getMonth() + 1, //鏈堜唤 
-        "d+": this.getDate(), //鏃� 
-        "h+": this.getHours(), //灏忔椂 
-        "m+": this.getMinutes(), //鍒� 
-        "s+": this.getSeconds(), //绉� 
-        "q+": Math.floor((this.getMonth() + 3) / 3), //瀛ｅ害 
-        "S": this.getMilliseconds() //姣 
+        "M+": this.getMonth() + 1, //月份 
+        "d+": this.getDate(), //日 
+        "h+": this.getHours(), //小时 
+        "m+": this.getMinutes(), //分 
+        "s+": this.getSeconds(), //秒 
+        "q+": Math.floor((this.getMonth() + 3) / 3), //季度 
+        "S": this.getMilliseconds() //毫秒 
     };
     if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
     for (var k in o)
@@ -83,7 +82,7 @@ Date.prototype.Format = function (fmt) { //author: meizz
     return fmt;
 }
 
-//寮傛鍔犺浇鑳屾櫙
+//异步加载背景
 
 function blobToDataURI(blob, callback) {
     var reader = new FileReader();
@@ -92,7 +91,7 @@ function blobToDataURI(blob, callback) {
     }
     reader.readAsDataURL(blob);
 }
-var url = "/bg.jpg";
+var url = "assets/img/bg.jpg";
 var xhr = new XMLHttpRequest();
 xhr.open('GET', url, true);
 xhr.responseType = "blob";
