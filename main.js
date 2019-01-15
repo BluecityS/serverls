@@ -91,7 +91,7 @@ function blobToDataURI(blob, callback) {
     }
     reader.readAsDataURL(blob);
 }
-var url = "/bg3.jpg";
+var url = "/bj3.jpg";
 var xhr = new XMLHttpRequest();
 xhr.open('GET', url, true);
 xhr.responseType = "blob";
