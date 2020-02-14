@@ -71,7 +71,7 @@ function blobToDataURI(blob, callback) {
         callback(e.target.result);
     }
     reader.readAsDataURL(blob);
-}
+
 var url = "/bg.jpg";
 var xhr = new XMLHttpRequest();
 xhr.open('GET', url, true);
@@ -87,3 +87,4 @@ xhr.onload = function () {
     }
 }
 xhr.send();
+}
