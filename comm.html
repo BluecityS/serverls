@@ -1,0 +1,21 @@
+<head>
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+</head>
+<body>
+    <span id="/comm.html" class="leancloud_visitors" data-flag-title="Your Article Title">
+        <em class="post-meta-item-text">访问量</em>
+        <i class="leancloud-visitors-count">Loading..</i>
+    </span>
+        <div id="vcomments"></div>
+    <script>
+        new Valine({
+            el: '#vcomments',
+            appId: 'QmVaiTR4H0YpHoObmqPl2anP-gzGzoHsz',
+            appKey: 'qHf3PRPFzVPKnD9sJ8CiaBvE',
+            path: '/comm.html',
+            visitor: true,
+            recordIP: true,
+            placeholder: '来啊,一起嗨皮鸭qwq'
+        })
+    </script>
+</body>
