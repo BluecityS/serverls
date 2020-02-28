@@ -7,7 +7,16 @@ $('.menu a').click(function () {
     target = $(this).attr('goto');
     switchTo(target);
 });
-
+function comm() {
+    var element1 = document.getElementById("comm");
+    element1.src = "/comm.html";
+    console.log("comm page loaded");
+}
+function music() {
+    var element = document.getElementById("music");
+    element.src = "/music.html";
+    console.log("music page loaded");
+}
 function switchTo(target) {
     $('.right section').each(function () {
         $(this).removeClass('active');
