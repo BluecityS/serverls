@@ -1,3 +1,4 @@
+var cOpen=false,mOpen=false;
 $(document).ready(function () {
     $(".loading").hide();
     gethitokoto();
@@ -8,14 +9,18 @@ $('.menu a').click(function () {
     switchTo(target);
 });
 function comm() {
+    if(cOpen)return;
     var element1 = document.getElementById("comm");
     element1.src = "/comm.html";
     console.log("comm page loaded");
+    cOpen=true;
 }
 function music() {
+    if(mOpen)return;
     var element = document.getElementById("music");
     element.src = "/music.html";
     console.log("music page loaded");
+    mOpen=true;
 }
 function switchTo(target) {
     $('.right section').each(function () {
