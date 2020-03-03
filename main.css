@@ -569,8 +569,9 @@ footer #hitokoto {
 
     .avatar {
         margin-top: -5em;
+        width:60%;
     }
-  iframe{width: 50%;}
+  iframe{width:70%;height:50%;}
     body {
         padding: 0 1em 0 1em;
     }
