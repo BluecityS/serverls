@@ -13,7 +13,7 @@ function getAchives() {
     t = ``;
     $.ajax({
         type: "GET",
-        url: "http://bcnet.xuehu.biz/wp-json/wp/v2/posts?per_page=10&page=1",
+        url: "http://bcnet.ml/wp-json/wp/v2/posts?per_page=10&page=1",
         dataType: "json",
         success: function (json) {
             for (var i = 0; i < json.length; i++) {
