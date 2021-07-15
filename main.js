@@ -1,7 +1,7 @@
 var cOpen=false,mOpen=false;
 $(document).ready(function () {
     $(".loading").hide();
-    gethitokoto();
+    getHitokoto();
     getAchives();
 });
 
